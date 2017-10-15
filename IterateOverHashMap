@@ -1,0 +1,24 @@
+ // Create a set for iteration over the values
+		 Set tempSet = instructions.entrySet();
+		 
+		 // Create an iterator
+		 Iterator tempIt = tempSet.iterator();
+		 
+		 // Print the Key
+		 System.out.println("\nKey: " + instructionNumber );
+		 
+		 // Walk through each value in the instructions block for this instruction number
+		 while ( tempIt.hasNext() ) {
+			 
+			 // Get the next value
+			 Map.Entry mentry = (Map.Entry)tempIt.next();
+			 
+			 // Get the key ( instruction name )
+			 String tempKey = (String) mentry.getKey();
+			 
+			 // Get the value
+			 String tempVal = (String) mentry.getValue();
+			 
+			 // Print out the instruction label and value
+			 System.out.println("Key: " + tempKey + "\tVal: " + tempVal);		 		         
+		 }
