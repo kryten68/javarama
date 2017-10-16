@@ -1,0 +1,22 @@
+{
+	"instructions": {
+		"1": {
+			"endpoint": "https://jsonplaceholder.typicode.com/posts/1",
+			"queryname": "callsInitiated.query",
+			"method": "get",
+			"user": "username",
+			"password": "password",
+			"jsonpath": "$.title",
+			"datalabel": "titleOne"
+		},
+		"2": {
+			"endpoint": "https://jsonplaceholder.typicode.com/posts/2",
+			"queryname": "dtmfSent.query",
+			"method": "get",
+			"user": "username",
+			"password": "password",
+			"jsonpath": "$.title",
+			"datalabel": "titleTwo"
+		}
+	}
+}
