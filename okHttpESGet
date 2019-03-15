@@ -1,0 +1,13 @@
+ public static String get(String url) throws IOException {
+
+        String resp;
+        OkHttpClient client = new OkHttpClient();
+        Request request = new Request.Builder()
+                .url(url)
+                .build();
+
+        try (Response response = client.newCall(request).execute()) {
+            resp = response.body().string();
+        }
+        return resp;
+    }
