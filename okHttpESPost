@@ -1,0 +1,15 @@
+public static String post(String url, String json) throws IOException {
+
+        OkHttpClient client = new OkHttpClient();
+        String credential = Credentials.basic("username","password");
+
+        RequestBody body = RequestBody.create(JSON, json);
+        Request request = new Request.Builder()
+                .url(url)
+                .addHeader("Authorization",credential)
+                .post(body)
+                .build();
+        try (Response response = client.newCall(request).execute()) {
+            return response.body().string();
+        }
+    }
